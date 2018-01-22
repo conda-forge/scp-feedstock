@@ -4,42 +4,42 @@
 {% set sha256 = "ea259edf4bba132050425bf9fdcf6de0987693a8934dbb99558d8dc6fc313e48" %}
 
 package:
-    name: {{ name }}
-    version: {{ version }}
+  name: {{ name }}
+  version: {{ version }}
 
 source:
-    fn: {{ name }}-{{ version }}.tar.gz
-    url: https://github.com/jbardin/scp.py/archive/v{{ version }}.tar.gz
-    sha256: {{ sha256 }}
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://github.com/jbardin/scp.py/archive/v{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
-    number: {{ build }}
-    noarch: python
-    script: python -m pip install --no-deps --ignore-installed .
+  number: {{ build }}
+  noarch: python
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
-    build:
-        - python
-        - pip
-        - paramiko
-    run:
-        - python
-        - paramiko
+  build:
+    - python
+    - pip
+    - paramiko
+  run:
+    - python
+    - paramiko
 
 test:
-    imports:
-        - scp
+  imports:
+    - scp
 
 about:
-    home: https://github.com/jbardin/scp.py.git
-    license: LGPL-2.1
-    license_file: LICENSE.txt
-    license_family: LGPL
-    dev_url: https://github.com/jbardin/scp.py
-    doc_url: https://github.com/jbardin/scp.py
-    summary: Pure python scp module for paramiko
+  home: https://github.com/jbardin/scp.py.git
+  license: LGPL-2.1
+  license_file: LICENSE.txt
+  license_family: LGPL
+  dev_url: https://github.com/jbardin/scp.py
+  doc_url: https://github.com/jbardin/scp.py
+  summary: Pure python scp module for paramiko
 
 extra:
-    recipe-maintainers:
-        - kwilcox
-        - ocefpaf
+  recipe-maintainers:
+    - kwilcox
+    - ocefpaf
