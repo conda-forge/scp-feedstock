@@ -14,12 +14,15 @@ Summary: Pure python scp module for paramiko
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/scp-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/scp-feedstock)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/scp-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/scp-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/scp/badges/version.svg)](https://anaconda.org/conda-forge/scp)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/scp/badges/downloads.svg)](https://anaconda.org/conda-forge/scp)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-scp-green.svg)](https://anaconda.org/conda-forge/scp) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/scp.svg)](https://anaconda.org/conda-forge/scp) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/scp.svg)](https://anaconda.org/conda-forge/scp) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/scp.svg)](https://anaconda.org/conda-forge/scp) |
 
 Installing scp
 ==============
