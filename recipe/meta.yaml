@@ -1,7 +1,7 @@
 {% set name = "scp" %}
-{% set version = "0.10.2" %}
+{% set version = "0.11.0" %}
 {% set build = 1 %}
-{% set sha256 = "ea259edf4bba132050425bf9fdcf6de0987693a8934dbb99558d8dc6fc313e48" %}
+{% set sha256 = "3b5335d076fc7ba6bf51d509443f8a5009139e1784ab69cd5d9ec62f176c33bc" %}
 
 package:
   name: {{ name }}
@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: {{ build }}
+  number: 0
   noarch: python
   script: python -m pip install --no-deps --ignore-installed .
 
