@@ -1,19 +1,15 @@
-{% set name = "scp" %}
-{% set version = "0.10.2" %}
-{% set build = 1 %}
-{% set sha256 = "ea259edf4bba132050425bf9fdcf6de0987693a8934dbb99558d8dc6fc313e48" %}
+{% set version = "0.11.0" %}
 
 package:
-  name: {{ name }}
+  name: scp
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/jbardin/scp.py/archive/v{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 3b5335d076fc7ba6bf51d509443f8a5009139e1784ab69cd5d9ec62f176c33bc
 
 build:
-  number: {{ build }}
+  number: 0
   noarch: python
   script: python -m pip install --no-deps --ignore-installed .
 
