@@ -1,4 +1,4 @@
-{% set version = "0.11.0" %}
+{% set version = "0.12.0" %}
 
 package:
   name: scp
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/jbardin/scp.py/archive/v{{ version }}.tar.gz
-  sha256: 3b5335d076fc7ba6bf51d509443f8a5009139e1784ab69cd5d9ec62f176c33bc
+  sha256: 4c908b54939017c496d2c1ec3ee00b6fa6a7f226f2f395207f2f21afaf0a685b
 
 build:
   number: 0
