@@ -5,19 +5,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/jbardin/scp.py/archive/v{{ version }}.tar.gz
-  sha256: 23c9c3e353180f6dde3c36c0161183785bbf22474f7e17c9b9cbfae5ef4f4a20
+  url: https://pypi.io/packages/source/s/scp/scp-{{ version }}.tar.gz
+  sha256: ef9d6e67c0331485d3db146bf9ee9baff8a48f3eb0e6c08276a8584b13bf34b3
 
 build:
   number: 0
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
     - python
     - pip
-    - paramiko
   run:
     - python
     - paramiko
