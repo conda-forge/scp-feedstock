@@ -27,7 +27,7 @@ test:
 
 about:
   home: https://github.com/jbardin/scp.py.git
-  license: LGPL-2.1
+  license: LGPL-2.1-or-later
   license_file: LICENSE.txt
   license_family: LGPL
   dev_url: https://github.com/jbardin/scp.py
