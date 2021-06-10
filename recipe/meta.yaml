@@ -9,16 +9,16 @@ source:
   sha256: 8bd748293d7362073169b96ce4b8c4f93bcc62cfc5f7e1d949e01e406a025bd4
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
-    - python
+    - python >=3.5
     - pip
   run:
-    - python
+    - python >=3.5
     - paramiko
 
 test:
