@@ -14,11 +14,11 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  host:
-    - python
+  build:
+    - python >=3.5
     - pip
   run:
-    - python
+    - python >=3.5
     - paramiko
 
 test:
