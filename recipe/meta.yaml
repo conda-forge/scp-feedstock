@@ -1,29 +1,35 @@
-{% set version = "0.13.5" %}
+{% set name = "scp" %}
+{% set version = "0.13.6" %}
+
 
 package:
-  name: scp
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/s/scp/scp-{{ version }}.tar.gz
-  sha256: 0ab2ee9178b8be53dc5c9fe2f33761e01a2435087f5c9fb5b54519873c650d60
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/scp-{{ version }}.tar.gz
+  sha256: 0a72f9d782e968b09b114d5607f96b1f16fe9942857afb355399edd55372fcf1
 
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.6
     - pip
   run:
-    - python >=3.5
+    - python >=3.6
     - paramiko
 
 test:
   imports:
     - scp
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/jbardin/scp.py.git
