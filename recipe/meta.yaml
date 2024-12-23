@@ -7,20 +7,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/scp-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/scp-{{ version }}.tar.gz
   sha256: f1b22e9932123ccf17eebf19e0953c6e9148f589f93d91b872941a696305c83f
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
+    - setuptools
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - paramiko
 
 test:
@@ -30,6 +31,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/jbardin/scp.py.git
