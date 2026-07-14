@@ -3,15 +3,11 @@ About scp-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/scp-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/jbardin/scp.py.git
+Home: https://github.com/jbardin/scp.py
 
 Package license: LGPL-2.1-or-later
 
-Summary: Pure python scp module for paramiko
-
-Development: https://github.com/jbardin/scp.py
-
-Documentation: https://github.com/jbardin/scp.py
+Summary: scp module for paramiko
 
 Current build status
 ====================
