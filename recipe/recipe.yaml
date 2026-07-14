@@ -1,0 +1,46 @@
+schema_version: 1
+
+context:
+  version: "0.16.0"
+
+package:
+  name: scp
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/s/scp/scp-${{ version }}.tar.gz
+  sha256: 1763a4b8ac424ea0c304f58b95a4a4a51d503a834ed77b4e89f1a32b30cbe662
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - paramiko
+
+tests:
+  - python:
+      imports:
+        - scp
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+
+about:
+  summary: scp module for paramiko
+  license: LGPL-2.1-or-later
+  license_file: LICENSE.txt
+  homepage: https://github.com/jbardin/scp.py
+
+extra:
+  recipe-maintainers:
+    - kwilcox
+    - ocefpaf
