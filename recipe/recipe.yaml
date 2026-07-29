@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.16.0"
+  version: "0.16.1"
 
 package:
   name: scp
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/scp/scp-${{ version }}.tar.gz
-  sha256: 1763a4b8ac424ea0c304f58b95a4a4a51d503a834ed77b4e89f1a32b30cbe662
+  sha256: 3f2b260bf9bd4c2b6857f697a1d7e8edc26fa569282b77027e849dfe1e48580a
 
 build:
   number: 0
